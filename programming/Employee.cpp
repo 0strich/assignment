@@ -4,12 +4,12 @@ using namespace std;
 
 // Employee 클래스의 정의 및 구현
 class Employee {
-	protected:
-	    string m_name;
+protected:
+    string m_name;
 	int m_payRate;
 	float m_hoursWorked;
-	public:
-	    Employee();
+public:
+    Employee();
 	Employee(string name, int payRate, float hoursWorked);
 	void Set_Name(string name);
 	string Get_Name();
@@ -24,8 +24,8 @@ class Employee {
 // Manager 클래스의 정의 및 구현 (Employee 클래스로부터 상속받음) [파생클래스]
 class Manager : public Employee {
 	bool m_fullTime;
-	public:
-        Manager();
+public:
+    Manager();
 	Manager(string name, int payRate, float hoursWorked, bool fullTime);
 	bool Get_FullTime();
 	void Set_FullTime(bool fullTime);
