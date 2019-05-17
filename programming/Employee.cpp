@@ -5,11 +5,11 @@ using namespace std;
 // Employee 클래스의 정의 및 구현
 class Employee {
 protected:
-    string m_name;
+	string m_name;
 	int m_payRate;
 	float m_hoursWorked;
 public:
-    Employee();
+	Employee();
 	Employee(string name, int payRate, float hoursWorked);
 	void Set_Name(string name);
 	string Get_Name();
@@ -25,7 +25,7 @@ public:
 class Manager : public Employee {
 	bool m_fullTime;
 public:
-    Manager();
+	Manager();
 	Manager(string name, int payRate, float hoursWorked, bool fullTime);
 	bool Get_FullTime();
 	void Set_FullTime(bool fullTime);
@@ -103,22 +103,21 @@ void Manager::Set_FullTime(bool fullTime) {
 
 // Employee 클래스로부터 상속받은 Compute_Salary() 재정의
 float Manager::Compute_Salary() {
-	if(m_fullTime) {
+	if(m_fullTime)
 		return (m_payRate*1.5) * 40;
-	} else {
+	else
 		return Employee::Compute_Salary();
-	}
 }
 
 // Employee 클래스로부터 상속받은 Print_Info() 재정의
 void Manager::Print_Info() {
 	cout << "이름 : " << m_name << endl;
 	cout << "시간당 급여 : " << m_payRate << "원\n";
-	if(m_fullTime) {
+	if(m_fullTime){
 		cout << "정규직 매니저" << endl;
 		cout << "근무시간 40시간 고정" << endl;
 		cout << "총급여 : " << Compute_Salary() << "원\n";
-	} else {
+	}else{
 		cout << "비정규직 매니저" << endl;
 		cout << "총급여 : " << Employee::Compute_Salary() << "원\n";
 	}
@@ -155,6 +154,6 @@ int main() {
 	mng2.Set_FullTime(false);
 	mng2.Print_Info();
 
-    system("PAUSE");
+	system("PAUSE");
 	return 0;
 }
