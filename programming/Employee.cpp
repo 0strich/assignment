@@ -47,7 +47,7 @@ Employee::Employee(string name, int payRate, float hoursWorked) {
 	m_hoursWorked = hoursWorked;
 }
 
-// Set_ 으로 시작하는 접근자 함수 정의
+// Set_ 으로 시작하는 접근자 함수 구현
 void Employee::Set_Name(string name) {
 	m_name = name;
 }
@@ -58,7 +58,7 @@ void Employee::Set_HoursWorked(float hoursWorked) {
 	m_hoursWorked = hoursWorked;
 }
 
-// Get_ 으로 시작하는 접근함수 정의
+// Get_ 으로 시작하는 접근함수 구현
 string Employee::Get_Name() {
 	return m_name;
 }
@@ -69,12 +69,12 @@ float Employee::Get_HoursWorked() {
 	return m_hoursWorked;
 }
 
-// Compute_Salary 함수 정의
+// Compute_Salary 함수 구현
 float Employee::Compute_Salary() {
 	return m_payRate * m_hoursWorked;
 }
 
-// Print_Info 함수 정의
+// Print_Info 함수 구현
 void Employee::Print_Info() {
 	cout << "이름 : " << m_name << endl;
 	cout << "시간당 급여 : " << m_payRate << "원\n";
@@ -93,7 +93,7 @@ Manager::Manager(string name, int payRate, float hoursWorked, bool fullTime)
 	m_fullTime = fullTime;
 }
 
-// 접근자 함수인 Get_FullTime 과 Set_FullTime 정의
+// 접근자 함수인 Get_FullTime 과 Set_FullTime 구현
 bool Manager::Get_FullTime() {
 	return m_fullTime;
 }
