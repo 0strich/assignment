@@ -49,19 +49,17 @@ public:
 };
 
 void PetDogs::Show_Pet() {
-	string gender_type[2] = {
-		"암컷", "수컷"
-	};
-	cout << "품 종 : " << Dogs::Get_Breed() << endl;            // 빈칸
-	cout << "나 이 : " << m_year << "살\n";                     // 빈칸
+	string gender_type[2] = {"암컷", "수컷"};
+	cout << "품 종 : " << Dogs::Get_Breed() << endl;						// 빈칸
+	cout << "나 이 : " << m_year << "살\n;												// 빈칸
 	cout << "이 름 : " << m_name << endl;                       // 빈칸
 	cout << "성 별 : " ;
 	switch(m_gender) {
 		case 'F':
-		    cout << gender_type[0] << endl;                     // 빈칸
-		break;
+			cout << gender_type[0] << endl;                     // 빈칸
+			break;
 		case 'M':
-		    cout << gender_type[1] << endl;                     // 빈칸
+			cout << gender_type[1] << endl;                     // 빈칸
 	}
 	cout << "평균수명 : " << m_lifeyear << "년\n";              // 빈칸
 	cout << "부 모 : " << m_parent << "\n";                     // 빈칸
@@ -71,6 +69,6 @@ void PetDogs::Show_Pet() {
 int main() {
 	PetDogs pug("퍼그", 4, "퍼글이", "퍼야+퍼냐", 'M', 2.5, 13);
 	pug.Show_Pet();                                             // 빈칸
-    system("PAUSE");
+	system("PAUSE");
 	return 0;
 }

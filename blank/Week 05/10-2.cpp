@@ -64,6 +64,6 @@ int main() {
 	m1.Print();
 	Woman w1("이효리", 38);
 	w1.Print();
-    system("PAUSE");
+	system("PAUSE");
 	return 0;
 }

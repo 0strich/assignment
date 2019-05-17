@@ -17,7 +17,7 @@ public:
 class Derived1 : virtual public Base {                  // 빈칸
 	string m_name;
 public:
-	Derived1(int id, string name) : Base(id) {        // 빈칸
+	Derived1(int id, string name) : Base(id) {        		// 빈칸
 		m_name = name;
 	}
 	void Show_Derived1() {
@@ -29,7 +29,7 @@ public:
 class Derived2 : virtual public Base {                  // 빈칸
 	string m_telno;
 public:
-	Derived2(int id, string telno) : Base(id) {       // 빈칸
+	Derived2(int id, string telno) : Base(id) {       		// 빈칸
 		m_telno = telno;
 	}
 	void Show_Derived2() {
@@ -42,7 +42,7 @@ class Derived3 : public Derived1, public Derived2 {     // 빈칸
 	string m_address;
 public:
 	Derived3(int id, string name, string telno, string address)
-	: Derived1(id, name), Derived2(id, telno) {       // 빈칸
+	: Derived1(id, name), Derived2(id, telno) {       		// 빈칸
 		m_address = address;
 		m_id = id;
 	}
