@@ -2,7 +2,6 @@
 #include <string>
 using namespace std;
 
-
 // Employee 클래스의 정의 및 구현
 class Employee {
 	protected:
@@ -33,42 +32,6 @@ class Manager : public Employee {
 	float Compute_Salary();
 	void Print_Info();
 };
-
-// mian() 정의
-int main() {
-	Employee emp("장길산", 8000, 32.0);
-	Manager mng1("홍길동", 12000, 32.0, true);
-	Manager mng2;
-
-	cout << "<종업원>" << endl;
-	emp.Print_Info();
-	cout << "\n***** 종업원 PayRate 및 hours 변경 *****" << endl;
-	emp.Set_PayRate(8500);
-	emp.Set_HoursWorked(40.0);
-	cout << "시간당 급여 : " << emp.Get_PayRate() << "원\n";
-	cout << "근무 시간 : " << emp.Get_HoursWorked() << "시간\n";
-	cout << "총급여 : " << emp.Compute_Salary() << "원\n\n";
-
-	cout << "<매니저1>" << endl;
-	mng1.Print_Info();
-	cout << "\n***** 매니저 PayRate 및 hours 변경 *****" << endl;
-	mng1.Set_PayRate(13500);
-	mng1.Set_HoursWorked(35.0);
-	cout << "시간당 급여 : " << mng1.Get_PayRate() << "원\n";
-	cout << "총급여 : " << mng1.Compute_Salary() << "원\n\n";
-
-	cout << "<매니저2>" << endl;
-	mng2.Print_Info();
-	cout << "\n***** 매니저 이름. PayRate 및 hours 변경 *****" << endl;
-	mng2.Set_Name("박문수");
-	mng2.Set_PayRate(12000);
-	mng2.Set_HoursWorked(25.5);
-	mng2.Set_FullTime(false);
-	mng2.Print_Info();
-
-    system("PAUSE");
-	return 0;
-}
 
 // Employee 클래스의 매개변수 없는 생성자
 Employee::Employee() {
@@ -161,3 +124,38 @@ void Manager::Print_Info() {
 	}
 }
 
+// mian() 정의
+int main() {
+	Employee emp("장길산", 8000, 32.0);
+	Manager mng1("홍길동", 12000, 32.0, true);
+	Manager mng2;
+
+	cout << "<종업원>" << endl;
+	emp.Print_Info();
+	cout << "\n***** 종업원 PayRate 및 hours 변경 *****" << endl;
+	emp.Set_PayRate(8500);
+	emp.Set_HoursWorked(40.0);
+	cout << "시간당 급여 : " << emp.Get_PayRate() << "원\n";
+	cout << "근무 시간 : " << emp.Get_HoursWorked() << "시간\n";
+	cout << "총급여 : " << emp.Compute_Salary() << "원\n\n";
+
+	cout << "<매니저1>" << endl;
+	mng1.Print_Info();
+	cout << "\n***** 매니저 PayRate 및 hours 변경 *****" << endl;
+	mng1.Set_PayRate(13500);
+	mng1.Set_HoursWorked(35.0);
+	cout << "시간당 급여 : " << mng1.Get_PayRate() << "원\n";
+	cout << "총급여 : " << mng1.Compute_Salary() << "원\n\n";
+
+	cout << "<매니저2>" << endl;
+	mng2.Print_Info();
+	cout << "\n***** 매니저 이름. PayRate 및 hours 변경 *****" << endl;
+	mng2.Set_Name("박문수");
+	mng2.Set_PayRate(12000);
+	mng2.Set_HoursWorked(25.5);
+	mng2.Set_FullTime(false);
+	mng2.Print_Info();
+
+    system("PAUSE");
+	return 0;
+}
