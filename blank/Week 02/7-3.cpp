@@ -3,13 +3,14 @@
 using namespace std;
 
 class Student{
-	________________;
+	________________;							// 정적 멤버 변수 m_count 를 int형으로 선언
 	string m_gender;
 	int m_age;
 public:
+	// 매개변수들의 디폴트 인수 값을 gender 는 NONE, age 는 20으로 세팅
 	Student(_________________________);
-	~Student();
-	Student(const Student &s);
+	~Student();									// 소멸자 함수
+	Student(const Student &s);					// 복사 생성자 함수
 	int Get_Age() { return m_age; }
 	string Get_Gender() { return m_gender }
 };
@@ -42,10 +43,12 @@ void Show_Student(Student s, string str){
 	cout << --- Show_Student() 함수 종료 ---\n\n";
 }
 
+_________________________ // 정적 멤버 변수(m_count) 메모리 할당(0으로 초기화)
+
 int main(){
-	________________;
-	________________;
-	________________;
+	________________;						// Student 클래스로 ob1 객체 생성(초기화 "남학생", 22)
+	________________;						// Student 클래스로 ob2 객체 생성(초기화 "여핛애", 21)
+	________________;						// Student 클래스로 ob3 객체 생성(초기화 없음)
 	cout << "\n------ Main() 함수 시작 ------\n";
 	//
 	cout << "ob1 객체의 성별은 (" << ________________ << ")입니다.\n";
