@@ -124,7 +124,6 @@ void Manager::Print_Info() {
 	}
 }
 
-// mian() 정의
 int main() {
 	Employee emp("장길산", 8000, 32.0);
 	Manager mng1("홍길동", 12000, 32.0, true);
