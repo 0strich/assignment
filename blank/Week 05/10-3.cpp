@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 class Base {
-	protected:
-	  int m_id;
-	public:
-	  Base(int id=0) {
+protected:
+	int m_id;
+public:
+	Base(int id=0) {
 		m_id = id;
 	}
 	void Show_Base() {
@@ -15,8 +16,8 @@ class Base {
 
 class Derived1 : virtual public Base {                  // 빈칸
 	string m_name;
-	public:
-	  Derived1(int id, string name) : Base(id) {        // 빈칸
+public:
+	Derived1(int id, string name) : Base(id) {        // 빈칸
 		m_name = name;
 	}
 	void Show_Derived1() {
@@ -24,10 +25,11 @@ class Derived1 : virtual public Base {                  // 빈칸
 		cout << "이름(Derived1) : " << m_name << endl;
 	}
 };
+
 class Derived2 : virtual public Base {                  // 빈칸
 	string m_telno;
-	public:
-	  Derived2(int id, string telno) : Base(id) {       // 빈칸
+public:
+	Derived2(int id, string telno) : Base(id) {       // 빈칸
 		m_telno = telno;
 	}
 	void Show_Derived2() {
@@ -35,11 +37,12 @@ class Derived2 : virtual public Base {                  // 빈칸
 		cout << "전화번호(Derived2) : " << m_telno << endl;
 	}
 };
+
 class Derived3 : public Derived1, public Derived2 {     // 빈칸
 	string m_address;
-	public:
-	  Derived3(int id, string name, string telno, string address)
-	  : Derived1(id, name), Derived2(id, telno) {       // 빈칸
+public:
+	Derived3(int id, string name, string telno, string address)
+	: Derived1(id, name), Derived2(id, telno) {       // 빈칸
 		m_address = address;
 		m_id = id;
 	}
@@ -49,6 +52,7 @@ class Derived3 : public Derived1, public Derived2 {     // 빈칸
 		cout << "주소(Derived3) : " << m_address << endl;
 	}
 };
+
 int main() {
 	Derived1 D1(11, "이단계");
 	D1.Show_Derived1();
