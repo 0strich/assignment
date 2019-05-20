@@ -7,7 +7,7 @@ class Coord{
 	int m_x, m_y;						// 두 좌표를 나타내는 비공개 변수
 public:
 	// 매개변수가 있는 생성자 함수 (두 매개변수의 디폴트 인수로 0을 사용)
-	_____________________{
+	Coord(int x = 0, int y = 0){
 		m_x = x;
 		m_y = y;
 	}
@@ -34,15 +34,15 @@ void Coord::ShowPoint(string pnt){
 // 점수를 곱한 후에 원래 호출한 객체의 값이 변경되어서는 안 된다
 Coord Coord::operator*(int k){
 	Coord temp;
-	_____________________;
-	_____________________;
-	_____________________;
+	temp.m_x = this->m_x * k;
+	temp.m_y = this->m_y * k;
+	return temp;
 }
 
 // Coord 클래스의 객체들의 거리를 구하는 기능을 가지도록 ^를 중복한다
 double Coord::operator^(Coord &p){
 	double length;
-	length = _____________________;
+	length = ;
 	return length;
 }
 
@@ -69,7 +69,7 @@ int main(){
 
 	// 연산자 함수 ^ 를 이용하여 대전대에서 시청까지의 거리를 구한다
 	cout << "대전대 - 시청 거리 = " << (____________) << endl;
-	
+
 	// 연산자 함수 * 를 이용하여 대전대에서 3배되는 좌표를 구해 출력한다
 	(____________).ShowPoint("대전대의 3개 좌표 ");
 
@@ -78,4 +78,3 @@ int main(){
 
 	return 0;
 }
-
