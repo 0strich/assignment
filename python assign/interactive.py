@@ -8,7 +8,7 @@ flag = 0
 Event = '''
 ★★★★★★★★★★★★★★★★★★
 ★   Event Time   ★
-★   Random Cube  ★
+★   Random Dice  ★
 ★★★★★★★★★★★★★★★★★★'''
 Past_Branch_Dictionary = {
     1 : (6, 00),
