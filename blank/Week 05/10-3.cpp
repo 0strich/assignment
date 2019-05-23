@@ -14,10 +14,10 @@ public:
 	}
 };
 
-class Derived1 : virtual public Base {                  // 빈칸
+class Derived1 : virtual public Base {
 	string m_name;
 public:
-	Derived1(int id, string name) : Base(id) {        		// 빈칸
+	Derived1(int id, string name) : Base(id) {
 		m_name = name;
 	}
 	void Show_Derived1() {
@@ -26,10 +26,10 @@ public:
 	}
 };
 
-class Derived2 : virtual public Base {                  // 빈칸
+class Derived2 : virtual public Base {
 	string m_telno;
 public:
-	Derived2(int id, string telno) : Base(id) {       		// 빈칸
+	Derived2(int id, string telno) : Base(id) {
 		m_telno = telno;
 	}
 	void Show_Derived2() {
@@ -38,11 +38,11 @@ public:
 	}
 };
 
-class Derived3 : public Derived1, public Derived2 {     // 빈칸
+class Derived3 : public Derived1, public Derived2 {
 	string m_address;
 public:
 	Derived3(int id, string name, string telno, string address)
-	: Derived1(id, name), Derived2(id, telno) {       		// 빈칸
+	: Derived1(id, name), Derived2(id, telno) {
 		m_address = address;
 		m_id = id;
 	}
@@ -61,6 +61,7 @@ int main() {
 	cout << "--------------------------------------------\n";
 	Derived3 D3(123, "삼단계", "010-4567-2222", "대전시 동구 용운동 96-3");
 	D3.Show_Derived3();
-    system("PAUSE");
+
+	system("PAUSE");
 	return 0;
 }

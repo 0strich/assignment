@@ -35,13 +35,11 @@ void Name::Show_Name() {
 }
 
 class PetDogs:public Dogs, protected Name {
-	// 빈칸
 	double m_weight;
 	int m_lifeyear;
 public:
 	PetDogs(string breed, int year, string name, string parent, char gender, double weight, int lifeyear)
 	: Dogs(breed, year), Name(name, parent, gender) {
-		// 빈칸
 		m_weight = weight;
 		m_lifeyear = lifeyear;
 	}
@@ -50,25 +48,26 @@ public:
 
 void PetDogs::Show_Pet() {
 	string gender_type[2] = {"암컷", "수컷"};
-	cout << "품 종 : " << Dogs::Get_Breed() << endl;						// 빈칸
-	cout << "나 이 : " << m_year << "살\n;												// 빈칸
-	cout << "이 름 : " << m_name << endl;                       // 빈칸
+	cout << "품 종 : " << Dogs::Get_Breed() << endl;
+	cout << "나 이 : " << m_year << "살\n;
+	cout << "이 름 : " << m_name << endl;
 	cout << "성 별 : " ;
 	switch(m_gender) {
 		case 'F':
-			cout << gender_type[0] << endl;                     // 빈칸
+			cout << gender_type[0] << endl;
 			break;
 		case 'M':
-			cout << gender_type[1] << endl;                     // 빈칸
+			cout << gender_type[1] << endl;
 	}
-	cout << "평균수명 : " << m_lifeyear << "년\n";              // 빈칸
-	cout << "부 모 : " << m_parent << "\n";                     // 빈칸
-	cout << "몸무게 : " << m_weight << "Kg" << endl;            // 빈칸
+	cout << "평균수명 : " << m_lifeyear << "년\n";
+	cout << "부 모 : " << m_parent << "\n";
+	cout << "몸무게 : " << m_weight << "Kg" << endl;
 }
 
 int main() {
 	PetDogs pug("퍼그", 4, "퍼글이", "퍼야+퍼냐", 'M', 2.5, 13);
-	pug.Show_Pet();                                             // 빈칸
+	pug.Show_Pet();
+	
 	system("PAUSE");
 	return 0;
 }
