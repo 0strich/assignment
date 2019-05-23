@@ -2,7 +2,6 @@
 #include <string>
 using namespace std;
 
-// Employee 클래스의 정의 및 구현
 class Employee {
 protected:
 	string m_name;
@@ -21,7 +20,6 @@ public:
 	void Print_Info();
 };
 
-// Manager 클래스의 정의 및 구현 (Employee 클래스로부터 상속받음) [파생클래스]
 class Manager : public Employee {
 	bool m_fullTime;
 public:
@@ -33,21 +31,18 @@ public:
 	void Print_Info();
 };
 
-// Employee 클래스의 매개변수 없는 생성자
 Employee::Employee() {
 	m_name = "NONE";
 	m_payRate = 0;
 	m_hoursWorked = 0.0;
 }
 
-// Employee 클래스의 매개변수 있는 생성자
 Employee::Employee(string name, int payRate, float hoursWorked) {
 	m_name = name;
 	m_payRate = payRate;
 	m_hoursWorked = hoursWorked;
 }
 
-// Set_ 으로 시작하는 접근자 함수 구현
 void Employee::Set_Name(string name) {
 	m_name = name;
 }
@@ -58,7 +53,6 @@ void Employee::Set_HoursWorked(float hoursWorked) {
 	m_hoursWorked = hoursWorked;
 }
 
-// Get_ 으로 시작하는 접근함수 구현
 string Employee::Get_Name() {
 	return m_name;
 }
@@ -69,12 +63,10 @@ float Employee::Get_HoursWorked() {
 	return m_hoursWorked;
 }
 
-// Compute_Salary 함수 구현
 float Employee::Compute_Salary() {
 	return m_payRate * m_hoursWorked;
 }
 
-// Print_Info 함수 구현
 void Employee::Print_Info() {
 	cout << "이름 : " << m_name << endl;
 	cout << "시간당 급여 : " << m_payRate << "원\n";
@@ -82,18 +74,15 @@ void Employee::Print_Info() {
 	cout << "총급여 : " << Compute_Salary() << "원\n";
 }
 
-// Manager 클래스의 매개변수 없는 생성자
 Manager::Manager() {
 	m_fullTime = true;
 }
 
-// Manager 클래스의 매개변수 있는 생성자
 Manager::Manager(string name, int payRate, float hoursWorked, bool fullTime)
 : Employee(name, payRate, hoursWorked) {
 	m_fullTime = fullTime;
 }
 
-// 접근자 함수인 Get_FullTime 과 Set_FullTime 구현
 bool Manager::Get_FullTime() {
 	return m_fullTime;
 }
@@ -101,7 +90,6 @@ void Manager::Set_FullTime(bool fullTime) {
 	m_fullTime = fullTime;
 }
 
-// Employee 클래스로부터 상속받은 Compute_Salary() 재정의
 float Manager::Compute_Salary() {
 	if(m_fullTime)
 		return (m_payRate*1.5) * 40;
@@ -109,7 +97,6 @@ float Manager::Compute_Salary() {
 		return Employee::Compute_Salary();
 }
 
-// Employee 클래스로부터 상속받은 Print_Info() 재정의
 void Manager::Print_Info() {
 	cout << "이름 : " << m_name << endl;
 	cout << "시간당 급여 : " << m_payRate << "원\n";
