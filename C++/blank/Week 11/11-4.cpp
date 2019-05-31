@@ -41,7 +41,7 @@ int main(){
             if(y == 0)
                 throw DivdeByZeroException(34, "main()", "0으로 나누는 예외 발생");
 
-            cout << (double)x / (double)y;
+            cout << (double)x / (double)y << endl;
         }catch(DivdeByZeroException &e){
             e.Print();
         }catch(InvalidInputException &e){
