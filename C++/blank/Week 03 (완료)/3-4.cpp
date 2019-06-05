@@ -6,26 +6,22 @@ int main(){
     int i;
     int *p;
 
-    for(i=0; i<5; i++){
-        arr[i] = i*3;
-    }
+    for(i=0; i<5; i++)
+        arr[i] = 3 * i;
 
     p = &arr[0];
-
-    for(i=0; i<5; i++){
-        cout << arr[i] << ' ';
-    }
-
+    for(i=0; i<5; i++)
+        cout << *(p + i) << ' ';
     cout << endl;
 
     for(i=0; i<5; i++){
-        arr[i] = *p+2;
-        p += 1;
+        *p += 2;
+        p++;
     }
 
     for(i=0; i<5; i++)
         cout << arr[i] << ' ';
-    cout << endl;
+    cout << "\n";
 
     return 0;
 }

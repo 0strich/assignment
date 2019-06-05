@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    cout << "여러 가지 값을 출력하는 프로그램 입니다." << endl << endl;
+    cout << "여러 가지 값을 출력하는 프로그램입니다." << endl << endl;
 
     int num;
     cout << "정수를 입력하세요 : ";

@@ -141,6 +141,5 @@ int main() {
 	mng2.Set_FullTime(false);
 	mng2.Print_Info();
 
-	system("PAUSE");
 	return 0;
 }
