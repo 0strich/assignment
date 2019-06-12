@@ -4,7 +4,7 @@ using namespace std;
 int main(){
     cout << 123.23 << " hello " << 100 << '\n';
     cout << 10 << ' ' << -10 << '\n';
-    cout << 100.0 << '\n';
+    cout << 100.0 << "\n\n";
 
     cout.unsetf(ios::dec);
     cout.setf(ios::hex);
@@ -12,8 +12,9 @@ int main(){
     cout << 123.23 << " hello " << 100 << '\n';
     cout.setf(ios::showpos);
     cout << 10 << ' ' << -10 << '\n';
-    cout.unsetf(ios::showpoint | ios::fixed);
-    cout << 100.0 << '\n';
+    cout.unsetf(ios::scientific);
+    cout.setf(ios::showpoint | ios::fixed);
+    cout << 100.0 << "\n\n";
 
     cout.setf(ios::uppercase | ios::showbase);
     cout.setf(ios::hex);
@@ -34,6 +35,6 @@ int main(){
     cout.width(10);
     cout.precision(6);
     cout << 0.003456789 << '\n';
-    cout << 100.0 << '\n';
+
     return 0;
 }

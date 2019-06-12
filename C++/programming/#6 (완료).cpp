@@ -8,8 +8,8 @@ protected:
     double m_x, m_y;
 public:
     CPoint(double x, double y);
-    virtual double Compute_Unit() = 0;              // 부피, 거리, 면적을 계산하기 위한 순수 가상함수
-    virtual void Print_Point();                     // 좌표를 출력하는 가상함수
+    virtual double Compute_Unit() = 0;
+    virtual void Print_Point();
 };
 CPoint::CPoint(double x, double y){
     m_x = x;
