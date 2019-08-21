@@ -54,7 +54,7 @@ int Delete(){
 int get_count(){
     // 요소의 개수를 카운트할 cnt 함수
     int cnt = 0;
-    if(IsFull())                            // 요소의 개수가 가득차있으면 MAX-1 을 반환
+    if(IsFull())    // 요소의 개수가 가득차있으면 MAX-1 을 반환
         return MAX-1;
     else{
         while(cnt != (rear % MAX)) cnt++;   // rear % MAX 의 수만큼 cnt++ 연산 (요소 개수 카운트)
